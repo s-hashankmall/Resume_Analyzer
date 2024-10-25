@@ -47,6 +47,7 @@ def suggest_job_roles(skills):
         model='command-xlarge-nightly',
         prompt=prompt,
         max_tokens=100
+        temperature=0.2
     )
     return response.generations[0].text.strip()
 
